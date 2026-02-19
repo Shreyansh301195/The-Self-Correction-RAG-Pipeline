@@ -1,0 +1,62 @@
+[
+  {
+    "id": "doc_001",
+    "device": "Cisco ASR 9000",
+    "category": "Router Troubleshooting",
+    "content": "Cisco ASR 9000 Series Router Troubleshooting Guide. To reset the Cisco ASR 9000 router, access the console port using a serial cable. Enter privileged EXEC mode by typing 'enable' and providing the enable password. Use the command 'reload' to restart the device. For factory reset, use 'write erase' followed by 'reload'. The ASR 9000 supports MPLS, BGP, and OSPF routing protocols. Default management IP is typically configured on GigabitEthernet0/0/0/0 interface."
+  },
+  {
+    "id": "doc_002",
+    "device": "Cisco ASR 9000",
+    "category": "Network Configuration",
+    "content": "Configuring BGP on Cisco ASR 9000: Enter global configuration mode with 'configure terminal'. Use 'router bgp <AS-number>' to start BGP configuration. Add neighbors with 'neighbor <IP> remote-as <AS>'. Verify BGP status with 'show bgp summary'. Common BGP issues include incorrect AS numbers, missing network statements, and firewall blocking port 179. The ASR 9000 supports up to 2 million BGP routes in its routing table."
+  },
+  {
+    "id": "doc_003",
+    "device": "Nokia 7750 SR",
+    "category": "Router Troubleshooting",
+    "content": "Nokia 7750 SR Troubleshooting Procedures. The Nokia 7750 SR uses a different CLI than Cisco. Access admin mode with '/configure'. To check system health run 'show system status'. For interface issues use 'show port <port-id> detail'. The 7750 SR uses ISIS as its primary IGP. To reset a specific card: 'admin reboot card <slot>'. Nokia 7750 SR supports TDM, Ethernet, and SONET/SDH interfaces. Default login is 'admin/admin' on first boot."
+  },
+  {
+    "id": "doc_004",
+    "device": "Juniper MX Series",
+    "category": "Router Troubleshooting",
+    "content": "Juniper MX Series Router Recovery Guide. Access the Juniper MX router via SSH or console. Enter configuration mode with 'configure'. Commit changes with 'commit' or 'commit confirmed 5' for a 5-minute rollback window. To factory reset: 'request system zeroize'. Check routing table with 'show route'. The MX Series uses Junos OS and supports commit/rollback for configuration management. MPLS, VPLS, and L3VPN are natively supported."
+  },
+  {
+    "id": "doc_005",
+    "device": "General OSS/BSS",
+    "category": "Network Operations",
+    "content": "OSS/BSS Troubleshooting Common Procedures. When a customer reports service degradation, first check the NMS (Network Management System) for active alarms. Use the ticketing system to log the incident. Check SNMP traps for the affected device. Common issues include: fiber cuts detected via OTDR, BGP route flapping, interface CRC errors, and power outages at remote sites. SLA breach thresholds: P1 outage must be resolved within 4 hours, P2 within 8 hours."
+  },
+  {
+    "id": "doc_006",
+    "device": "Cisco ASR 9000",
+    "category": "Hardware Maintenance",
+    "content": "Cisco ASR 9000 Line Card Replacement Procedure. Before replacing a line card, ensure you have an ESD wrist strap. Power down the specific line card slot using 'admin hw-module slot <n> shutdown'. Wait 30 seconds for complete shutdown. Remove the ejector levers and slide out the card. Insert the new line card and secure the ejectors. Power on with 'admin hw-module slot <n> reload'. Verify with 'show platform'. The ASR 9000 supports hot-swappable RSPs and line cards."
+  },
+  {
+    "id": "doc_007",
+    "device": "Nokia 7750 SR",
+    "category": "MPLS Configuration",
+    "content": "Nokia 7750 SR MPLS Configuration Guide. To enable MPLS on the 7750 SR: navigate to /configure router mpls. Add interfaces with 'interface <name>'. Enable LDP with '/configure router ldp'. Verify MPLS labels with 'show router mpls lsp'. The Nokia 7750 SR uses RSVP-TE for traffic engineering. Configure RSVP with '/configure router rsvp'. The 7750 SR label stack can support up to 8 labels deep. Use 'debug router mpls' for troubleshooting."
+  },
+  {
+    "id": "doc_008",
+    "device": "General Telecom",
+    "category": "Fiber Troubleshooting",
+    "content": "Fiber Optic Cable Troubleshooting. When experiencing high packet loss or no signal, first check physical connections. Clean fiber connectors with appropriate cleaning tools. Use OTDR (Optical Time Domain Reflectometer) to locate fiber breaks. Acceptable loss budget for single-mode fiber: max 0.35 dB/km. Check optical power levels at receiver: must be within -8 to -23 dBm for most transceivers. Fiber bends under 30mm radius can cause signal loss. Replace damaged fiber sections following OTDR readings."
+  },
+  {
+    "id": "doc_009",
+    "device": "Cisco ASR 9000",
+    "category": "QoS Configuration",
+    "content": "QoS Configuration on Cisco ASR 9000. Define class maps with 'class-map match-any <name>'. Create policy maps with 'policy-map <name>'. Apply to interfaces with 'service-policy input/output <name>'. The ASR 9000 supports DSCP, CoS, and MPLS EXP marking. For voice traffic, use DSCP EF (46) for RTP streams. Video conferencing should use AF41 (34). Best effort traffic uses BE (0). Verify QoS with 'show policy-map interface'. The ASR 9000 supports hierarchical QoS (H-QoS)."
+  },
+  {
+    "id": "doc_010",
+    "device": "Juniper MX Series",
+    "category": "BGP Configuration",
+    "content": "Juniper MX Series BGP Troubleshooting. Check BGP neighbor state with 'show bgp neighbor'. Peer states: Active (trying to connect), Connect, OpenSent, OpenConfirm, Established. If stuck in Active state, verify: reachability to peer IP, TCP port 179 not blocked, correct AS numbers, authentication passwords match. Use 'show bgp neighbor <IP> detail' for verbose output. Clear BGP session with 'clear bgp neighbor <IP>'. The MX Series supports 4-byte AS numbers (RFC 4893)."
+  }
+]

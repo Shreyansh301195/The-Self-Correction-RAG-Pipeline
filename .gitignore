@@ -1,0 +1,7 @@
+backend/correction_rag
+*.pyc
+backend/__pycache__/rag_graph.cpython-313.pyc
+*.bin
+node_modules/
+chroma_db
+logs
